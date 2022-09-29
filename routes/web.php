@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\URL;
 use App\Http\Controllers\Sitemap;
 
 /*
@@ -17,7 +16,7 @@ use App\Http\Controllers\Sitemap;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect(url("getSitemap"));
 });
 
 Route::get('getSitemap', function () {
